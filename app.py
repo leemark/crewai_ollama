@@ -20,7 +20,7 @@ researcher = Agent(
 
 writer = Agent(role = "writer", 
                    goal="write compelling narratives about new technologies", 
-                   backstory="""You are a renowned Writer andContent Strategist, known for your insightful
+                   backstory="""You are a renowned Writer and Content Strategist, known for your insightful
   and engaging articles on technology and innovation. With a deep understanding of
   the AI industry, you transform complex concepts into compelling narratives.""",
                    verbose=True,
@@ -29,7 +29,8 @@ writer = Agent(role = "writer",
 
 research = Task(description="""Conduct a comprehensive analysis of the latest advancements in AI in 2024.
   Identify key trends, breakthrough technologies, and potential industry impacts.
-  Compile your findings in a detailed report. Your final answer MUST be a full analysis report.""", agent=researcher)
+  Compile your findings in a detailed report. You MUST use a tool to search the web 
+  for relevant information and your final answer MUST be a full analysis report.""", agent=researcher)
 
 write = Task(description="""Using the insights from the researcher's report, develop an engaging blog
   post that highlights the most significant AI advancements.
